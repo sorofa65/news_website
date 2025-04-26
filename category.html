@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Add this to <head> section -->
+<base href="/">
+
+<!-- Update all internal links -->
+<a href="index.html">Home</a>
+<a href="article.html?slug=test-article">Article</a>
+<a href="category.html?cat=technology">Technology</a>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="category-title">Category | Global News Network</title>
+    <meta name="description" id="category-description" content="Latest news in this category">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Global News Network" width="180">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html?cat=world">World</a></li>
+                    <li><a href="category.html?cat=politics">Politics</a></li>
+                    <li><a href="category.html?cat=business">Business</a></li>
+                    <li><a href="category.html?cat=technology">Technology</a></li>
+                    <li><a href="category.html?cat=science">Science</a></li>
+                    <li><a href="category.html?cat=health">Health</a></li>
+                    <li><a href="category.html?cat=sports">Sports</a></li>
+                    <li><a href="category.html?cat=entertainment">Entertainment</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <button class="search-toggle" aria-label="Toggle search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for news..." id="search-input">
+                    <button class="search-btn" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <h1 id="category-heading">Category</h1>
+            <p id="category-subtitle">Latest news in this category</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="category-main">
+        <div class="container">
+            <!-- Category Articles -->
+            <section class="category-articles">
+                <div class="grid-container" id="category-articles">
+                    <!-- Articles will be loaded here by JavaScript -->
+                </div>
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Popular in Category -->
+            <aside class="category-sidebar">
+                <h2 class="sidebar-title">Popular in <span id="popular-category-name">Category</span></h2>
+                <div class="popular-articles" id="popular-articles">
+                    <!-- Popular articles will be loaded here -->
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="sidebar-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest news in this category delivered to your inbox</p>
+                    <form class="newsletter-form" id="category-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <img src="images/logo-white.png" alt="Global News Network" width="180">
+                    <p>Delivering accurate and timely news from around the globe.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="category.html?cat=world">World</a></li>
+                        <li><a href="category.html?cat=politics">Politics</a></li>
+                        <li><a href="category.html?cat=business">Business</a></li>
+                        <li><a href="category.html?cat=technology">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 News Ave, Media City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@globalnews.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Global News Network. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/category.js"></script>
+</body>
+</html>

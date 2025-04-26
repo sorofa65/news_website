@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add this to <head> section -->
+<base href="/">
+
+<!-- Update all internal links -->
+<a href="index.html">Home</a>
+<a href="article.html?slug=test-article">Article</a>
+<a href="category.html?cat=technology">Technology</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Your Site</title>
+    <script>
+        // Redirect to homepage after 5 seconds
+        setTimeout(() => {
+            window.location.href = '/index.html';
+        }, 5000);
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Global News Network" width="180">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html?cat=world">World</a></li>
+                    <li><a href="category.html?cat=politics">Politics</a></li>
+                    <li><a href="category.html?cat=business">Business</a></li>
+                    <li><a href="category.html?cat=technology">Technology</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <button class="search-toggle" aria-label="Toggle search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for news..." id="search-input">
+                    <button class="search-btn" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 404 Content -->
+    <main class="error-main">
+        <div class="container">
+            <section class="error-content">
+                <div class="error-code">404</div>
+                <h1>Page Not Found</h1>
+                <p class="error-message">The page you're looking for doesn't exist or may have been moved.</p>
+                <div class="error-actions">
+                    <a href="index.html" class="error-btn primary">
+                        <i class="fas fa-home"></i> Return Home
+                    </a>
+                    <a href="contact.html" class="error-btn secondary">
+                        <i class="fas fa-envelope"></i> Contact Support
+                    </a>
+                </div>
+                <div class="search-suggest">
+                    <p>Or try searching for what you need:</p>
+                    <form class="error-search" action="search.html" method="GET">
+                        <input type="text" name="q" placeholder="Search our news...">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Popular Articles -->
+            <section class="popular-section">
+                <h2 class="section-title">Popular News</h2>
+                <div class="grid-container" id="popular-articles">
+                    <!-- Articles will be loaded by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <img src="images/logo-white.png" alt="Global News Network" width="180">
+                    <p>Delivering accurate and timely news from around the globe.</p>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="category.html?cat=world">World</a></li>
+                        <li><a href="category.html?cat=politics">Politics</a></li>
+                        <li><a href="category.html?cat=business">Business</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Global News Network. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/404.js"></script>
+</body>
+</html>
